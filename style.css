@@ -1,0 +1,212 @@
+html,
+body {
+  background: #999;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor {
+  width: 1px;
+  height: 1px;
+  filter: drop-shadow(0 0 1vmin #ffc);
+  position: relative;
+}
+
+.cuerpo {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 40vmin;
+  height: 40vmin;
+  background: #ff5;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transition: background 5s ease;
+}
+
+.cuerpo:hover{
+  background: #FF0000;
+}
+
+
+.corbata {
+  width: 22%;
+  height: 12%;
+  background: black;
+  clip-path: polygon(0% 0%, 50% 42%, 100% 0%, 100% 100%, 50% 58%, 0% 100%);
+  margin: 240px auto 0; 
+}
+
+.cejas {
+  position: relative;
+  width: 35%;
+  height: 30%;
+  border-radius: 50%;
+  top: 49%;
+  left: 50%;
+  transform: translateY(-350%) translateX(-50%);
+  background-image:
+    conic-gradient(
+      transparent 3%, black 0 4%, 
+      transparent 0 9%, black 0 10%,
+      transparent 0 40%, black 0 41%,
+      transparent 0 46%, black 0 47%,
+      transparent 0 53%, black 0 54%, 
+      transparent 0 59%, black 0 60%,
+      transparent 0 90%, black 0 91%,
+      transparent 0 96%, black 0 97%,
+      transparent 0
+   )
+}
+
+
+.ojo {
+  position: relative;
+  width: 25%;
+  height: 25%;
+  background: white;
+  border: 0.375vmin solid black;
+  border-radius: 2% 80% 2% 100%;
+  align-self: flex-start;
+  transform: rotate(-45deg) translateY(-80%) translateX(80%);
+  margin: -170px auto 0;  
+}
+
+.ojo::before {
+  content: "";
+  display: block;
+  position: relative; 
+  width: 14%;
+  height: 50%;
+  background: black;
+  left: 55%; 
+  top: 17.5%; 
+  transform: translateX(-50%) rotate(45deg); 
+  border-radius: 100%;
+}
+
+
+
+.sombrero {
+  width: 4vmin;
+  height: 18vmin;
+  background: black;
+  margin-top: -33vmin; 
+  align-self: flex-start; 
+  left: 20vmin; 
+  right: auto; 
+  transform: translateX(-30%) translateY(-420%) rotate(185deg); 
+}
+
+
+.sombrero::before {
+  content: "";
+  display: block;
+  width: 260%;
+  height: 1.5vmin;
+  background: black;
+  align-self: flex-end; 
+  margin-left: -80%; 
+}
+
+
+.pierna {
+  width: 6vmin;
+  height: 15vmin;
+  border: 3vmin solid transparent;
+  border-left: 2vmin solid black;
+  border-bottom: 2vmin solid black;
+  border-radius: 50% 10% 50% 50%;
+  transform: skewY(-30deg)  translateY(-180%);
+  position: relative;
+  top: 13vmin;
+  left: -9vmin;
+}
+
+.pierna::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 2.5vmin;
+  height: 8vmin;
+  background: black;
+  transform: skewY(30deg)  translateY(-30%)  translateX(140%);
+  border-radius: 50%;
+  top: 90%;
+  right: -0.85vmin;
+}
+
+.pierna + .pierna {
+  top: 13vmin;
+  transform: scaleX(-1) rotate(10deg) skewY(-30deg)  translateY(-300%)  translateX(-90%);
+  left: -1vmin;
+}
+
+.br-1 {
+  position: relative;
+  right: 18.5vmin;
+  top: 3vmin;
+  width: 3vmin;
+  height: 12vmin;
+  border: 1.75vmin solid black;
+  border-top: 2.25vmin solid black;
+  border-radius: 100% / 70% 70% 120% 120%;
+  transform: rotate(-90deg)  translateY(-40%);
+}
+
+.br-1::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 70%;
+  right: 70%;
+  width: 6vmin;
+  height: 4vmin;
+  background: black;
+  border-radius: 50%;
+  transform: rotate(55deg)  translateY(50%);
+}
+
+.br-2 {
+  width: 17vmin;
+  height: 16vmin;
+  border: 1.75vmin solid transparent;
+  border-right-color: black;
+  border-bottom-color: black;
+  border-radius: 50%;
+  position: relative;
+  transform:  translateY(-80%);
+  top: -6.5vmin;
+  left: 10vmin;
+}
+
+.br-2::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 6vmin;
+  height: 5vmin;
+  background: black;
+  border-radius: 50%;
+  left: 86%;
+  top: -5%;
+}
+
+.br-2::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -20%;
+  left: 63%;
+  width: 4vmin;
+  height: 6vmin;
+  border-radius: 50% 40% 40% 40%;
+  text-shadow: 2vmin 0 0 -0.5vmin black;
+  transform: rotate(-13deg);
+}
